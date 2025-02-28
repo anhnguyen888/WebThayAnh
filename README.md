@@ -1,6 +1,4 @@
-Dưới đây là nội dung được chuyển đổi sang định dạng Markdown:
 
-```markdown
 ## Các bước cập nhật lại cơ sở dữ liệu (CSDL) trên máy tính khác
 
 ### Bước 1: Sao chép dự án
@@ -32,5 +30,3 @@ Update-Database
 - Kiểm tra lại cơ sở dữ liệu đã được tạo các bảng và dữ liệu đã được cập nhật đúng cách.
 - Chạy ứng dụng để đảm bảo rằng mọi thứ hoạt động bình thường.
 ```
-
-Đây là phiên bản Markdown của nội dung trong ảnh. Bạn có muốn chỉnh sửa hoặc bổ sung gì không? 😊
