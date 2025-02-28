@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+    var roles = await UserManager.GetRolesAsync(user);
+    var isAdmin = roles.Contains("Admin");
+}
+
+<ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link" asp-page="./Index">Profile</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-page="./ChangePassword">Change Password</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-page="./TwoFactorAuthentication">Two-Factor Authentication</a>
+    </li>
+    @if (isAdmin)
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-page="./ManageUsers">Manage Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-page="./ManageRoles">Manage Roles</a>
+        </li>
+    }
+</ul>

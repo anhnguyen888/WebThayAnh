@@ -1,0 +1,16 @@
+﻿@page "{id}"
+@model WebThayAnh.Areas.Identity.Pages.Account.Manage.DeleteRoleModel
+@{
+    ViewData["Title"] = "Delete Role";
+}
+
+<h1>Delete Role</h1>
+
+<h3>Are you sure you want to delete this role?</h3>
+<div>
+    <h4>@Model.RoleName</h4>
+    <form method="post">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./ManageRoles">Cancel</a>
+    </form>
+</div>
