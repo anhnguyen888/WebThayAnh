@@ -3,21 +3,22 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using WebThayAnh.Data;
 
 namespace WebThayAnh.Areas.Identity.Pages.Account.Manage
 {
     public class ManageUsersModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ManageUsersModel(UserManager<IdentityUser> userManager)
+        public ManageUsersModel(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
 
-        public IList<IdentityUser> Users { get; set; }
+        public IList<ApplicationUser> Users { get; set; }
 
-        public UserManager<IdentityUser> UserManager => _userManager;
+        public UserManager<ApplicationUser> UserManager => _userManager;
 
         public async Task OnGetAsync()
         {

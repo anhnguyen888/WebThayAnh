@@ -6,15 +6,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using WebThayAnh.Data;
 
 namespace WebThayAnh.Areas.Identity.Pages.Account.Manage
 {
     public class EditUserModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public EditUserModel(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public EditUserModel(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;

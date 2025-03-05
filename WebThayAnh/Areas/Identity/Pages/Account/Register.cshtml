@@ -17,6 +17,14 @@
                 <label asp-for="Input.Email">Email</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+
+            <div class="form-floating mb-3">
+                <label asp-for="Input.StudentId"></label>
+                <input asp-for="Input.StudentId" class="form-control" />
+                <span asp-validation-for="Input.StudentId" class="text-danger"></span>
+            </div>
+
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.Password">Password</label>

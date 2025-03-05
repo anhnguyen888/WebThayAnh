@@ -28,14 +28,14 @@ namespace WebThayAnh.Data
             }
 
             // Seed Admin User
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
             // Create admin user if it doesn't exist
             string adminEmail = "admin@example.com";
             var adminUser = await userManager.FindByEmailAsync(adminEmail);
             if (adminUser == null)
             {
-                var admin = new IdentityUser
+                var admin = new ApplicationUser
                 {
                     UserName = adminEmail,
                     Email = adminEmail,
@@ -54,7 +54,7 @@ namespace WebThayAnh.Data
             var teacherUser = await userManager.FindByEmailAsync(teacherEmail);
             if (teacherUser == null)
             {
-                var teacher = new IdentityUser
+                var teacher = new ApplicationUser
                 {
                     UserName = teacherEmail,
                     Email = teacherEmail,
@@ -73,7 +73,7 @@ namespace WebThayAnh.Data
             var studentUser = await userManager.FindByEmailAsync(studentEmail);
             if (studentUser == null)
             {
-                var student = new IdentityUser
+                var student = new ApplicationUser
                 {
                     UserName = studentEmail,
                     Email = studentEmail,
