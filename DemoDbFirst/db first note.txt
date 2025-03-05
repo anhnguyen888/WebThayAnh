@@ -1,0 +1,7 @@
+Server name: DESKTOP-0M3035K\SQLEXPRESS
+Authentications: windows Authentication
+Database name: Sang4_2025_LapTrinhWeb
+TrustServerCertificate: true
+
+
+Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=C5_QuanLySinhVien;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
